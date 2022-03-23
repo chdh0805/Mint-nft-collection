@@ -1,0 +1,57 @@
+{
+  "name": "create-and-mint-nft-collection",
+  "version": "1.6.5",
+  "description": "Source code to create and mint generative art via NFTPort API. Special thanks to codeSTACKr and Hashlips for their source codebase.",
+  "main": "index.js",
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "layers/**/*",
+      "node_modules/**/*",
+      "src/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "node index.js",
+    "batch_ipfs_metas_migration": "node utils/custom/batch_ipfs_metas_migration.js",
+    "check_mints": "node utils/custom/check_mints.js",
+    "check_mints_batch": "node utils/custom/check_mints_batch.js",
+    "create_provenance": "node utils/art_engine/create_provenance.js",
+    "create_wallet_edition_combo": "node utils/custom/create_wallet_edition_combo.js",
+    "generate": "node index.js",
+    "generate_metadata": "node utils/art_engine/generate_metadata.js",
+    "mint_batch": "node utils/nftport/mint_batch.js",
+    "mint_item": "node utils/nftport/mint_item.js",
+    "mint_range": "node utils/nftport/mint_range.js",
+    "mint": "node utils/nftport/mint.js",
+    "pixelate": "node utils/art_engine/pixelate.js",
+    "preview_gif": "node utils/art_engine/preview_gif.js",
+    "preview": "node utils/art_engine/preview.js",
+    "rarity": "node utils/art_engine/rarity.js",
+    "rarity_md": "node utils/custom/getRarity_fromMetadata.js",
+    "rarity_rank": "node utils/custom/rarity_rank.js",
+    "remint": "node utils/nftport/remint.js",
+    "remint_batch": "node utils/nftport/remint_batch.js",
+    "reveal": "node utils/nftport/reveal.js",
+    "update_image_info": "node utils/custom/update_image_info.js",
+    "update_json_to_generic_meta": "node utils/custom/update_json_to_generic_meta.js",
+    "update_metadata_info": "node utils/custom/update_metadata_info.js",
+    "update_opensea_metadata": "node utils/custom/update_opensea_metadata.js",
+    "update_nft_info": "node utils/custom/update_nft_info.js",
+    "uploadFiles": "node utils/nftport/uploadFiles.js",
+    "uploadMetas": "node utils/nftport/uploadMetas.js",
+    "uploadMetas_directory": "node utils/nftport/uploadMetas_directory.js"
+  },
+  "author": "Rohan de Jongh (thepeanutgalleryandco)",
+  "license": "MIT",
+  "dependencies": {
+    "async-sema": "^3.1.1",
+    "canvas": "^2.9.0",
+    "form-data": "^4.0.0",
+    "gif-encoder-2": "^1.0.5",
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^13.5.0",
+    "sha1": "^1.1.1",
+    "simple-get": "4.0.1"
+  }
+}
